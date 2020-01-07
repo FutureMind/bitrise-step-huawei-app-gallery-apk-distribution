@@ -69,34 +69,35 @@ inputs:
   - apk_path:
     opts:
       title: APK path
+      is_expand: true
       is_required: true
 
   - huawei_filename:
     opts:
       title: Huwei filename
+      is_expand: true
       is_required: true
 
   - huawei_app_id:
     opts:
       title: Huawei app ID
-      is_expand: false
+      is_expand: true
       is_required: true
 
   - huawei_client_id:
     opts:
       title: Huawei client ID
-      is_expand: false
+      is_expand: true
       is_required: true
 
   - huawei_client_secret:
     opts:
       title: Huawei client secret
-      is_expand: false
+      is_expand: true
       is_required: true
 
   - lang:
     opts:
       title: Language (example: en-EN)
-      is_expand: false
+      is_expand: true
       is_required: true
-      
