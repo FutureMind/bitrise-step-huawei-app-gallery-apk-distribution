@@ -66,32 +66,32 @@ toolkit:
 
 
 inputs:
-  - apk_path:
+  - apk_path: Set apk path
     opts:
       title: APK path
       is_expand: false
       is_required: true
-  - huawei_filename:
+  - huawei_filename: Set version filename
     opts:
       title: Huwei filename
       is_required: true
-  - huawei_app_id:
+  - huawei_app_id: Set app id
     opts:
       title: Huawei app ID
       is_expand: false
       is_required: true
-  - huawei_client_id:
+  - huawei_client_id: Set client id
     opts:
       title: Huawei client ID
       is_expand: false
       is_required: true
-  - huawei_client_secret:
+  - huawei_client_secret: Set client secret
     opts:
       title: Huawei client secret
       is_expand: false
       is_required: true
-  - lang: en-EN
+  - lang: Set default language
     opts:
-      title: Lang
+      title: Language (example: en-EN)
       is_expand: false
       is_required: true
