@@ -98,6 +98,6 @@ inputs:
 
   - lang:
     opts:
-      title: Language (example: en-EN)
+      title: Language (example en-EN)
       is_expand: true
       is_required: true
