@@ -8,14 +8,14 @@
 # - Bitrise CLI guides: http://devcenter.bitrise.io/bitrise-cli/
 
 title: |-
-  Huawei App Gallery APK Distribution
+  Deploy to Huawei App Gallery
 summary: |
-  Uploads apk to Huawei App Gallery
+  Uploads APK to Huawei App Gallery
 description: |
-  Uploads apk to Huawei App Gallery
-website: https://github.com/pawelcala/bitrise-step-huawei-app-gallery-apk-distribution
-source_code_url: https://github.com/pawelcala/bitrise-step-huawei-app-gallery-apk-distribution
-support_url: https://github.com/pawelcala/bitrise-step-huawei-app-gallery-apk-distribution/issues
+  Uploads APK to Huawei App Gallery
+website: https://github.com/FutureMind/bitrise-step-huawei-app-gallery-apk-distribution
+source_code_url: https://github.com/FutureMind/bitrise-step-huawei-app-gallery-apk-distribution
+support_url: https://github.com/FutureMind/bitrise-step-huawei-app-gallery-apk-distribution/issues
 host_os_tags:
   - osx-10.10
   - ubuntu-16.04
@@ -74,25 +74,25 @@ inputs:
 
   - huawei_filename:
     opts:
-      title: Huawei filename
+      title: File name
       is_expand: true
       is_required: true
 
   - huawei_app_id:
     opts:
-      title: Huawei app ID
+      title: App Id
       is_expand: true
       is_required: true
 
   - huawei_client_id:
     opts:
-      title: Huawei client ID
+      title: Client Id
       is_expand: true
       is_required: true
 
   - huawei_client_secret:
     opts:
-      title: Huawei client secret
+      title: Client Secret
       is_expand: true
       is_required: true
 
