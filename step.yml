@@ -51,12 +51,8 @@ run_if: ""
 
 deps:
   brew:
-  - name: git
-  - name: wget
   - name: jq
   apt_get:
-  - name: git
-  - name: wget
   - name: jq
 
 
@@ -66,7 +62,7 @@ toolkit:
 
 
 inputs:
-  - apk_path:
+  - apk_path: $BITRISE_APK_PATH
     opts:
       title: APK path
       is_expand: true
@@ -95,6 +91,7 @@ inputs:
       title: Client Secret
       is_expand: true
       is_required: true
+      is_sensitive: true
 
   - lang:
     opts:
