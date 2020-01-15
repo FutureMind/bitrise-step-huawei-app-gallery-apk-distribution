@@ -12,7 +12,7 @@ title: |-
 summary: |
   Uploads APK to Huawei App Gallery
 description: |
-  Uploads APK to Huawei App Gallery
+  This step is based on Huawei Publishing API (https://developer.huawei.com/consumer/en/service/hms/catalog/AGCConnectAPI.html?page=hmssdk_appGalleryConnect_getstarted)
 website: https://github.com/FutureMind/bitrise-step-huawei-app-gallery-apk-distribution
 source_code_url: https://github.com/FutureMind/bitrise-step-huawei-app-gallery-apk-distribution
 support_url: https://github.com/FutureMind/bitrise-step-huawei-app-gallery-apk-distribution/issues
@@ -86,13 +86,13 @@ inputs:
   - huawei_client_id:
     opts:
       title: Client ID
-      description: Client ID generated in 'Users and permissions' -> Api Key -> AppGalleryConnect API
+      description: Client ID generated in `Users and permissions -> Api Key -> AppGalleryConnect API`
       is_expand: true
       is_required: true
 
   - huawei_client_secret:
     opts:
-      description: Client Secret generated in Users and permissions -> Api Key -> AppGalleryConnect API
+      description: Client Secret generated in `Users and permissions -> Api Key -> AppGalleryConnect API`
       title: Client Secret
       is_expand: true
       is_required: true
@@ -100,6 +100,7 @@ inputs:
 
   - lang: en-EN
     opts:
-      title: Language Type (example en-EN)
+      title: Language Type
+      description: For more languages refer to `https://developer.huawei.com/consumer/en/service/hms/catalog/AGCConnectAPI.html?page=hmssdk_appGalleryConnect_api_reference_language_type`
       is_expand: true
       is_required: true
