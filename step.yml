@@ -33,8 +33,9 @@ project_type_tags:
   # - ios
 #   - macos
   - android
-#   - xamarin
-#   - react-native
+  - xamarin
+  - react-native
+  - flutter
 #   - cordova
 #   - ionic
 
