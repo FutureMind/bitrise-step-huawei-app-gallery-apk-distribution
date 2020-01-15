@@ -93,7 +93,7 @@ inputs:
       is_required: true
       is_sensitive: true
 
-  - lang:
+  - lang: en-EN
     opts:
       title: Language (example en-EN)
       is_expand: true
