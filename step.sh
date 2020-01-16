@@ -2,7 +2,7 @@
 # fail if any commands fails
 set -e
 # debug log
-#set -x
+# set -x
 
 #Setup env vars
 LANG="${lang}"
@@ -26,18 +26,16 @@ curl --silent -X POST \
 ACCESS_TOKEN=`jq -r '.access_token' token.json`
 printf "Obtaining a Token - Done\n"
 
-
 printf "\nObtaining the File Upload URL\n"
 curl --silent -X GET \
   'https://connect-api.cloud.huawei.com/api/publish/v2/upload-url?appid='"${huawei_app_id}"'&suffix=apk' \
   -H 'Authorization: Bearer '"${ACCESS_TOKEN}"'' \
   -H 'cache-control: no-cache' \
-  -H 'client_id: '"${HUAWEI_CLIENT_ID}"'' > uploadurl.json
+  -H 'client_id: '"${huawei_client_id}"'' > uploadurl.json
 
 UPLOAD_URL=`jq -r '.uploadUrl' uploadurl.json`
 UPLOAD_AUTH_CODE=`jq -r '.authCode' uploadurl.json`
 printf "Obtaining the File Upload URL - Done\n"
-
 
 printf "\nUploading a File\n"
 curl --silent -X POST \
@@ -58,7 +56,7 @@ printf "Uploading a File - Done\n"
 
 printf "\nUpdating App File Information - add previoulsy uploaded file\nFileName: ${FILENAME_TO_UPLOAD}"
 curl --silent -X PUT \
-  'https://connect-api.cloud.huawei.com/api/publish/v2/app-file-info?appId='"$HUAWEI_APP_ID"'' \
+  'https://connect-api.cloud.huawei.com/api/publish/v2/app-file-info?appId='"$huawei_app_id"'' \
   -H 'Authorization: Bearer '"${ACCESS_TOKEN}"'' \
   -H 'Content-Type: application/json' \
   -H 'cache-control: no-cache' \
