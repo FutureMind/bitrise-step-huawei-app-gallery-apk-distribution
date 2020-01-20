@@ -70,7 +70,7 @@ inputs:
       is_expand: true
       is_required: true
 
-  - huawei_filename: build_${ANDROID_VERSION_NAME}_${ANDROID_VERSION_CODE}.apk
+  - huawei_filename: build_${BITRISE_BUILD_NUMBER}.apk
     opts:
       title: File name
       description: Unique name of APK file upload.
