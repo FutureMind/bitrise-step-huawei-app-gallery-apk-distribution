@@ -102,6 +102,6 @@ inputs:
   - lang: en-EN
     opts:
       title: Language Type
-      description: For more languages refer to [Language Types](https://developer.huawei.com/consumer/en/service/hms/catalog/AGCConnectAPI.html?page=hmssdk_appGalleryConnect_api_reference_language_type)
+      description: For more languages refer to [Language Types](https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agcapi-reference-langtype)
       is_expand: true
       is_required: true
