@@ -65,6 +65,7 @@ toolkit:
 inputs:
   - apk_path: $BITRISE_APK_PATH
     opts:
+      category: Config
       title: APK path
       description: Path to generated APK file to deploy.
       is_expand: true
@@ -72,6 +73,7 @@ inputs:
 
   - huawei_filename: build_${BITRISE_BUILD_NUMBER}.apk
     opts:
+      category: Config
       title: File name
       description: Unique name of APK file upload.
       is_expand: true
@@ -79,6 +81,7 @@ inputs:
 
   - huawei_app_id:
     opts:
+      category: Config
       title: App ID
       description: App ID can be found in App information tab.
       is_expand: true
@@ -86,6 +89,7 @@ inputs:
 
   - huawei_client_id:
     opts:
+      category: Config
       title: Client ID
       description: Client ID generated in `Users and permissions -> Api Key -> AppGalleryConnect API`
       is_expand: true
@@ -93,6 +97,7 @@ inputs:
 
   - huawei_client_secret:
     opts:
+      category: Config
       description: Client Secret generated in `Users and permissions -> Api Key -> AppGalleryConnect API`
       title: Client Secret
       is_expand: true
@@ -101,7 +106,17 @@ inputs:
 
   - lang: en-EN
     opts:
+      category: Config
       title: Language Type
       description: For more languages refer to [Language Types](https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agcapi-reference-langtype)
       is_expand: true
       is_required: true
+  - show_debug_logs: "no"
+    opts:
+      category: Debug
+      title: "Show debug logs?"
+      description: |
+        If debug=yes the step will print debug infos
+      value_options:
+        - "no"
+        - "yes"

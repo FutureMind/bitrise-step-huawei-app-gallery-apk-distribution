@@ -9,6 +9,7 @@ app:
   - CLIENT_ID: ${CLIENT_ID}
   - CLIENT_SECRET: ${CLIENT_SECRET}
   - LANG: ${LANG}
+  - SHOW_DEBUG_LOGS: ${SHOW_DEBUG_LOGS}
   # If you want to share this step into a StepLib
   - BITRISE_STEP_ID: huawei-app-gallery-apk-distribution
   - BITRISE_STEP_VERSION: "1.0.0"
@@ -44,6 +45,7 @@ workflows:
         - huawei_client_id: ${CLIENT_ID}
         - huawei_client_secret: ${CLIENT_SECRET}
         - lang: ${LANG}
+        - show_debug_logs: ${SHOW_DEBUG_LOGS}
 
 
   # ----------------------------------------------------------------
