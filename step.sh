@@ -7,10 +7,11 @@ set -e
 #Setup env vars
 LANG="${lang}"
 FILENAME_TO_UPLOAD="${huawei_filename}"
+FILE_EXT="${apk_path##*.}"
 
 printf "Apk path is: ${apk_path}\n"
 printf "Lang is: ${LANG}"
-
+printf "File extension is ${FILE_EXT}"
 
 printf "\n\nObtaining a Token\n"
 curl --silent -X POST \
@@ -28,7 +29,7 @@ printf "Obtaining a Token - Done\n"
 
 printf "\nObtaining the File Upload URL\n"
 curl --silent -X GET \
-  'https://connect-api.cloud.huawei.com/api/publish/v2/upload-url?appid='"${huawei_app_id}"'&suffix=apk' \
+  'https://connect-api.cloud.huawei.com/api/publish/v2/upload-url?appid='"${huawei_app_id}"'&suffix='"${FILE_EXT}" \
   -H 'Authorization: Bearer '"${ACCESS_TOKEN}"'' \
   -H 'cache-control: no-cache' \
   -H 'client_id: '"${huawei_client_id}"'' > uploadurl.json
@@ -52,7 +53,6 @@ FILE_DEST_URL=`jq -r '.result.UploadFileRsp.fileInfoList[0].fileDestUlr' uploadf
 FILE_SIZE=`jq -r '.result.UploadFileRsp.fileInfoList[0].size' uploadfile.json`
 
 printf "Uploading a File - Done\n"
-
 
 printf "\nUpdating App File Information - add previoulsy uploaded file\nFileName: ${FILENAME_TO_UPLOAD}"
 curl --silent -X PUT \
