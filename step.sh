@@ -2,7 +2,9 @@
 # fail if any commands fails
 set -e
 # debug log
-# set -x
+if [ "${show_debug_logs}" == "yes" ]; then
+  set -x
+fi
 
 #Setup env vars
 LANG="${lang}"
