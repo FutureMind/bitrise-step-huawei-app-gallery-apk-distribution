@@ -9,9 +9,9 @@ fi
 #Setup env vars
 LANG="${lang}"
 FILENAME_TO_UPLOAD="${huawei_filename}"
-FILE_EXT="${apk_path##*.}"
+FILE_EXT="${file_path##*.}"
 
-printf "Apk path is: ${apk_path}\n"
+printf "Apk path is: ${file_path}\n"
 printf "Lang is: ${LANG}"
 printf "File extension is ${FILE_EXT}"
 
@@ -49,7 +49,7 @@ curl --silent -X POST \
   -F authCode="${UPLOAD_AUTH_CODE}" \
   -F fileCount=1 \
   -F parseType=1 \
-  -F file=@"${apk_path}" > uploadfile.json
+  -F file=@"${file_path}" > uploadfile.json
 
 FILE_DEST_URL=`jq -r '.result.UploadFileRsp.fileInfoList[0].fileDestUlr' uploadfile.json`
 FILE_SIZE=`jq -r '.result.UploadFileRsp.fileInfoList[0].size' uploadfile.json`

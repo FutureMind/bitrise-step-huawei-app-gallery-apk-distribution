@@ -63,7 +63,7 @@ toolkit:
 
 
 inputs:
-  - apk_path: $BITRISE_APK_PATH
+  - file_path: $BITRISE_APK_PATH
     opts:
       category: Config
       title: File path

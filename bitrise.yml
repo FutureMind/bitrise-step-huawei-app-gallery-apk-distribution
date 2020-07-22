@@ -3,7 +3,7 @@ default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 
 app:
   envs:
-  - APK_PATH: ${APK_PATH}
+  - APK_PATH: ${FILE_PATH}
   - FILE_NAME: ${FILE_NAME}
   - APP_ID: ${APP_ID}
   - CLIENT_ID: ${CLIENT_ID}
@@ -39,7 +39,7 @@ workflows:
           file if you would not specify another value.
         run_if: true
         inputs:
-        - apk_path: ${APK_PATH}
+        - file_path: ${FILE_PATH}
         - huawei_filename: ${FILE_NAME}
         - huawei_app_id: ${APP_ID}
         - huawei_client_id: ${CLIENT_ID}
