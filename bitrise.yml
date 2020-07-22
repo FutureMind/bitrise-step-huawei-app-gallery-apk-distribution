@@ -3,7 +3,7 @@ default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 
 app:
   envs:
-  - APK_PATH: ${FILE_PATH}
+  - FILE_PATH: ${FILE_PATH}
   - FILE_NAME: ${FILE_NAME}
   - APP_ID: ${APP_ID}
   - CLIENT_ID: ${CLIENT_ID}
