@@ -10,7 +10,7 @@
 title: |-
   Deploy to Huawei App Gallery
 summary: |
-  Uploads APK to Huawei App Gallery
+  Uploads APK/AAB to Huawei App Gallery
 description: |
   This step is based on [Huawei Publishing API](https://developer.huawei.com/consumer/en/service/hms/catalog/AGCConnectAPI.html?page=hmssdk_appGalleryConnect_getstarted)
 website: https://github.com/FutureMind/bitrise-step-huawei-app-gallery-apk-distribution

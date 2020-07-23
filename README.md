@@ -1,6 +1,6 @@
-# Huawei App Gallery APK Distribution
+# Huawei App Gallery App Distribution
 
-Uploads apk to Huawei App Gallery
+Uploads apk/aab to Huawei App Gallery
 
 
 ## How to use this Step

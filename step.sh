@@ -11,7 +11,7 @@ LANG="${lang}"
 FILENAME_TO_UPLOAD="${huawei_filename}"
 FILE_EXT="${file_path##*.}"
 
-printf "Apk path is: ${file_path}\n"
+printf "File path is: ${file_path}\n"
 printf "Lang is: ${LANG}"
 printf "File extension is ${FILE_EXT}"
 
