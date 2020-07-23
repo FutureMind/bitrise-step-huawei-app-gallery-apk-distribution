@@ -63,11 +63,11 @@ toolkit:
 
 
 inputs:
-  - apk_path: $BITRISE_APK_PATH
+  - file_path: $BITRISE_APK_PATH
     opts:
       category: Config
-      title: APK path
-      description: Path to generated APK file to deploy.
+      title: File path
+      description: Path to generated APK/AAB file to deploy.
       is_expand: true
       is_required: true
 
@@ -75,7 +75,7 @@ inputs:
     opts:
       category: Config
       title: File name
-      description: Unique name of APK file upload.
+      description: Unique name of APK/AAB file upload.
       is_expand: true
       is_required: true
 

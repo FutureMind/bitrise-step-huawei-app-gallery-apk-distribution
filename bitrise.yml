@@ -3,7 +3,7 @@ default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 
 app:
   envs:
-  - APK_PATH: ${APK_PATH}
+  - FILE_PATH: ${FILE_PATH}
   - FILE_NAME: ${FILE_NAME}
   - APP_ID: ${APP_ID}
   - CLIENT_ID: ${CLIENT_ID}
@@ -12,7 +12,7 @@ app:
   - SHOW_DEBUG_LOGS: ${SHOW_DEBUG_LOGS}
   # If you want to share this step into a StepLib
   - BITRISE_STEP_ID: huawei-app-gallery-apk-distribution
-  - BITRISE_STEP_VERSION: "1.0.1"
+  - BITRISE_STEP_VERSION: "1.1.0"
   - BITRISE_STEP_GIT_CLONE_URL: https://github.com/FutureMind/bitrise-step-huawei-app-gallery-apk-distribution.git
   - MY_STEPLIB_REPO_FORK_GIT_URL: $MY_STEPLIB_REPO_FORK_GIT_URL
 
@@ -39,7 +39,7 @@ workflows:
           file if you would not specify another value.
         run_if: true
         inputs:
-        - apk_path: ${APK_PATH}
+        - file_path: ${FILE_PATH}
         - huawei_filename: ${FILE_NAME}
         - huawei_app_id: ${APP_ID}
         - huawei_client_id: ${CLIENT_ID}
